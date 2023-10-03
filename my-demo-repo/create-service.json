@@ -1,0 +1,29 @@
+{
+    "taskDefinition": "ecs-demo:1",
+    "cluster": "my-cluster",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:667880010491:listener/app/Docker-LoadBalancer/eaec424ecfe4bfbb/83f63b6b3b21b0a1",
+            "containerName": "sample-website",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "FARGATE",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "us-east-2a",
+                "us-east-2b"
+            ],
+            "securityGroups": [
+                "sg-09bd40539e1e248ac"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    }
+}
