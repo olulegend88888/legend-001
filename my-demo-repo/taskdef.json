@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "taskdef-json",
-            "image": "<IMAGE1_NAME>",
+            "image": "nginx",
             "essential": true,
             "portMappings": [
                 {
