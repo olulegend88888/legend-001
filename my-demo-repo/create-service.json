@@ -3,7 +3,7 @@
     "cluster": "my-cluster",
     "loadBalancers": [
         {
-            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:667880010491:listener/app/Docker-LoadBalancer/eaec424ecfe4bfbb/83f63b6b3b21b0a1",
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:667880010491:targetgroup/target-group-1/14a6d54195a2fd5b",
             "containerName": "sample-website",
             "containerPort": 80
         }
